@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hardware</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="detalhesSO.css">
+    <script src="./detalhesSO.js" defer></script>
+    <script src="../node_modules/@vizuaalog/bulmajs/dist/tabs.js"></script>
+
+</head>
+
+<body>
+    <button class="button is-rounded"><a href="../index.html">
+        <h1>Voltar</h1>
+    </a></button>
+    <div class="tabs-wrapper is-centered">
+        <div class="tabs is-centered">
+            <ul>
+                <li class="is-active">
+                    <a>Núcleos CPU</a>
+                </li>
+                <li>
+                    <a>Sistema Operacional</a>
+                </li>
+                <li>
+                    <a>Videos</a>
+                </li>
+                <li>
+                    <a>Documents</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="tabs-content">
+            <ul>
+                <li class="is-active container">
+                        <h1 class="title">Detalhes CPU</h1>
+                        <h2 class="subtitle">Arquitetura: <span id="cpu_arq"></span></h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Modelo</th>
+                                    <th>Velocidade</th>
+                                    <th>Tempo em modo usuário</th>
+                                    <th>Tempo em modo sys</th>
+                                    <th>Tempo em modo idle </th>
+                                    <th>Tempo em modo irq </th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th id="total_nucleos"></th>
+                                </tr>
+                            </tfoot>
+                            <tbody id="tabela_cpu_body">
+                            </tbody>
+                        </table>
+                </li>
+                <li class="container" style="text-align: center;" id="os_tab">
+                    <h2>Carregando
+                        <progress class="progress is-medium is-dark" max="100"></progress>
+                    </h2>
+                </li>
+                <li>
+                    <h1>Recolhendo informações ...</h1>
+                </li>
+                <li>
+                    <h1>Recolhendo informações ...</h1>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
