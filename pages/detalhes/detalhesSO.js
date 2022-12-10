@@ -12,9 +12,6 @@ function getDataAndFillInfo() {
     siStaticData.memLayout().then((memLayoutData) => gerarInfoGeneric(memLayoutData, 'mem_tab', 'Dados da memória ram'));
     siStaticData.graphics().then((graphicsData) => gerarInfoGeneric(graphicsData.controllers, 'graphics_tab', 'Dados da placa de video'));
 }
-siStaticData.getStaticData().then(data => {
-    console.log(data)
-})
 window.addEventListener('DOMContentLoaded', () => {
     gerarTabelaCPU(document.getElementById('tabela_cpu_body'));
 })

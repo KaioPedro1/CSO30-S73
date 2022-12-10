@@ -1,5 +1,5 @@
 const { contextBridge } = require('electron');
-const { spawn } = require ('child_process');
+const { spawn } = require('child_process');
 const os = require('os')
 const si = require('systeminformation');
 contextBridge.exposeInMainWorld('OS', {
@@ -9,7 +9,8 @@ contextBridge.exposeInMainWorld('OS', {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-  document.getElementById("hardware").addEventListener("click", () => window.location.href = "./pages/detalhesSO.html");
+  document.getElementById("hardware").addEventListener("click", () => window.location.href = "./pages/detalhes/detalhesSO.html");
+  document.getElementById("desempenho").addEventListener("click", () => window.location.href = "./pages/desempenho/desempenho.html");
   document.getElementById("shell").addEventListener("click", openShell);
 })
 
