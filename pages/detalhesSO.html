@@ -14,8 +14,8 @@
 
 <body>
     <button class="button is-rounded"><a href="../index.html">
-        <h1>Voltar</h1>
-    </a></button>
+            <h1>Voltar</h1>
+        </a></button>
     <div class="tabs-wrapper is-centered">
         <div class="tabs is-centered">
             <ul>
@@ -26,49 +26,89 @@
                     <a>Sistema Operacional</a>
                 </li>
                 <li>
-                    <a>Videos</a>
+                    <a>Placa mãe</a>
                 </li>
                 <li>
-                    <a>Documents</a>
+                    <a>Bios</a>
+                </li>
+                <li>
+                    <a>Disco</a>
+                </li>
+                <li>
+                    <a>Memoria</a>
+                </li>
+                <li>
+                    <a>Placa de vídeo</a>
                 </li>
             </ul>
         </div>
-    
+
         <div class="tabs-content">
             <ul>
                 <li class="is-active container">
-                        <h1 class="title">Detalhes CPU</h1>
-                        <h2 class="subtitle">Arquitetura: <span id="cpu_arq"></span></h2>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Modelo</th>
-                                    <th>Velocidade</th>
-                                    <th>Tempo em modo usuário</th>
-                                    <th>Tempo em modo sys</th>
-                                    <th>Tempo em modo idle </th>
-                                    <th>Tempo em modo irq </th>
-                                </tr>
-                            </thead>
-                            <tfoot>
-                                <tr>
-                                    <th id="total_nucleos"></th>
-                                </tr>
-                            </tfoot>
-                            <tbody id="tabela_cpu_body">
-                            </tbody>
-                        </table>
+                    <h1 class="title">Detalhes CPU</h1>
+                    <h2 class="subtitle">Arquitetura: <span id="cpu_arq"></span></h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Modelo</th>
+                                <th>Velocidade</th>
+                                <th>Tempo em modo usuário</th>
+                                <th>Tempo em modo sys</th>
+                                <th>Tempo em modo idle </th>
+                                <th>Tempo em modo irq </th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th id="total_nucleos"></th>
+                            </tr>
+                        </tfoot>
+                        <tbody id="tabela_cpu_body">
+                        </tbody>
+                    </table>
                 </li>
-                <li class="container" style="text-align: center;" id="os_tab">
-                    <h2>Carregando
-                        <progress class="progress is-medium is-dark" max="100"></progress>
-                    </h2>
+                <li class="container" style="text-align: center;">
+                    <div class="content" id="os_tab">
+                        <h2>Carregando
+                            <progress class="progress is-medium is-dark" max="100"></progress>
+                        </h2>
+                    </div>
                 </li>
-                <li>
-                    <h1>Recolhendo informações ...</h1>
+                <li class="container" style="text-align: center;">
+                    <div class="content" id="placa_mae_tab">
+                        <h2>Carregando
+                            <progress class="progress is-medium is-dark" max="100"></progress>
+                        </h2>
+                    </div>
                 </li>
-                <li>
-                    <h1>Recolhendo informações ...</h1>
+                <li class="container" style="text-align: center;">
+                    <div class="content" id="bios_tab">
+                        <h2>Carregando
+                            <progress class="progress is-medium is-dark" max="100"></progress>
+                        </h2>
+                    </div>
+                </li>
+                <li class="container" style="text-align: center;">
+                    <div class="content" id="disk_tab">
+                        <h2>Carregando
+                            <progress class="progress is-medium is-dark" max="100"></progress>
+                        </h2>
+                    </div>
+                </li>
+                <li class="container" style="text-align: center;">
+                    <div class="content" id="mem_tab">
+                        <h2>Carregando
+                            <progress class="progress is-medium is-dark" max="100"></progress>
+                        </h2>
+                    </div>
+                </li>
+                <li class="container" style="text-align: center;">
+                    <div class="content" id="graphics_tab">
+                        <h2>Carregando
+                            <progress class="progress is-medium is-dark" max="100"></progress>
+                        </h2>
+                    </div>
                 </li>
             </ul>
         </div>
