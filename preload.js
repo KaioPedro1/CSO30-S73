@@ -1,4 +1,5 @@
 const { contextBridge } = require('electron');
+const { spawn } = require ('child_process');
 const os = require('os')
 const si = require('systeminformation');
 contextBridge.exposeInMainWorld('OS', {
@@ -13,7 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 const openShell = () => {
-  const shell = require('shelljs');
-  shell.echo('Aberto pelo dashboard');
-  shell
+  const terminal = 'gnome-terminal';
+  spawn(terminal)
 }
