@@ -69,34 +69,4 @@ const criarTitulo = (containerHTML, text) => {
     titulo.className = "title"
     titulo.innerText = text;
     containerHTML.appendChild(titulo)
-}/*
-const gerarTabelaOS = (data) =>{ 
-    let osTabDiv = document.getElementById('os_tab');
-    let listDiv = document.createElement('div');
-    arrOS = Object.entries(data);   
-    while (osTabDiv.firstChild) {
-        osTabDiv.removeChild(osTabDiv.firstChild);
-    }
-    criarTitulo(osTabDiv, 'Dados do sistema operacional estático')
-    arrOS.forEach((item)=>{   
-        let p = document.createElement('p');
-        p.innerHTML = item[0].toUpperCase()+': '+item[1];
-        listDiv.appendChild(p)
-    })
-    osTabDiv.appendChild(listDiv);
 }
-const gerarTabelaMotherboard = (data) =>{
-    let osTabDiv = document.getElementById('placa_mae_tab');
-    let listDiv = document.createElement('div');
-    arrOS = Object.entries(data);   
-    while (osTabDiv.firstChild) {
-        osTabDiv.removeChild(osTabDiv.firstChild);
-    }
-    criarTitulo(osTabDiv, 'Dados do sistema operacional estático')
-    arrOS.forEach((item)=>{   
-        let p = document.createElement('p');
-        p.innerHTML = item[0].toUpperCase()+': '+item[1];
-        listDiv.appendChild(p)
-    })
-    osTabDiv.appendChild(listDiv);
-}*/

@@ -6,12 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dashboard?</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      let openShell = OS.getShell();
-      document.getElementById("btnShell").addEventListener("click", () => openShell())
-    })
-  </script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="./index.js"></script>
 </head>
 
 <body>
@@ -42,6 +38,8 @@
                 <p class="title">Desempenho CPU</p>
                 <p class="subtitle">Monitorar uso da CPU e seus núcleos por segundo</p>
               </div>
+              <div id="chart_div_cpu"><progress id="loadingCPU" class="progress is-small is-primary" max="100"></progress>
+                </div>
               <footer class="card-footer">
                 <a href="./pages/desempenhoCPU/desempenhoCPU.html"
                   class="card-footer-item button is-outlined">Monitorar</a>
@@ -57,13 +55,14 @@
             <p class="title">Desempenho memória</p>
             <p class="subtitle">Monitorar uso da memória ram e memória virtual</p>
           </div>
+          <div id="chart_div_mem"><progress id="loadingMem" class="progress is-small is-primary" max="100"></progress>
+          </div>
           <footer class="card-footer">
             <a href="./pages/desempenhoMem/desempenhoMem.html" class="card-footer-item button is-outlined">Monitorar</a>
           </footer>
         </article>
       </div>
     </div>
-
     <div class="tile is-ancestor">
       <div class="tile is-12 is-vertical">
         <article class="tile is-child box"

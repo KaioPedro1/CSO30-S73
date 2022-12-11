@@ -13,13 +13,13 @@ window.addEventListener('DOMContentLoaded', () => {
 si.getDynamicData().then(data => console.log(data))
 
 function usersCallback(data) {
+
     let tableBody = document.getElementById('tableBody');
-    tableBody.innerHTML="";
+    tableBody.innerHTML = "";
     let processesList = data.processes.list;
-    console.log(data.processes.list);
     processesList.sort((a, b) => a.cpu - b.cpu);
     gerarTabelaProcessos(document.getElementById('tableBody'), processesList)
-    
+
 }
 const setObserver = () => {
     valueObject = {
