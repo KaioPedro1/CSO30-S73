@@ -1,6 +1,8 @@
 const si = OS.getSiObj();
-
+const killProcessPID = OS.getFunctionKillProcess();
+const killProcessName = OS.getFunctionKillAll();
 var sortOpt = 'cpu';
+
 
 window.addEventListener('DOMContentLoaded', () => {
     let tableBody = document.getElementById('tableBody');
@@ -11,8 +13,6 @@ window.addEventListener('DOMContentLoaded', () => {
         setObserver();
     })
 });
-
-si.getDynamicData().then(data => console.log(data))
 
 function usersCallback(data) {
     let tableBody = document.getElementById('tableBody');
@@ -26,7 +26,7 @@ const setObserver = () => {
     valueObject = {
         processes: 'list'
     }
-     si.observe(valueObject, 1000, usersCallback);
+    si.observe(valueObject, 1000, usersCallback);
 }
 const gerarTabelaProcessos = (tabelaBody, lista) => {
     lista.forEach(process => {
@@ -60,3 +60,13 @@ const handleDblClick = (event) => {
     sortOpt = event.srcElement.id;
     console.log(sortOpt)
 }
+const handleKillPid = (event) => {
+    let inputValue = document.getElementById('pidKill').value;
+    if (inputValue == "") return
+    killProcessPID(inputValue);
+}
+const handleKillNome = (event) => {
+    let inputValue = document.getElementById('nomeKill').value;
+    if (inputValue == "") return
+    killProcessName(inputValue);
+}   

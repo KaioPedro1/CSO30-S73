@@ -12,35 +12,37 @@
 
 <body>
     <div class="level">
-        <button class="button is-rounded"><a href="../../index.html">
-                <h1>Voltar</h1>
-            </a></button>
-        <div id="loading" style="text-align: center;">
-            <h2>Carregando ...
+        <div class="level-right">
+            <button class="button is-rounded level-item"><a href="../../index.html">
+                    <h1>Voltar</h1>
+                </a></button>
+
+        </div>
+        <div id ="loading" class="level-item">
+            <h2 style="width: 50%; text-align: center;">Carregando ...
                 <progress class="progress is-small is-info" max="100"></progress>
             </h2>
         </div>
-        <div class="field has-addons">
-            <div class="control">
-                <input class="input" type="text" placeholder="PID">
-
-                <!-- <select name="country">
-                        <option value="Argentina">PID</option>
-                        <option value="Bolivia">PID do parente</option>
-                        <option value="Brazil">Nome</option>
-                        <option value="Chile">% de uso da CPU</option>
-                        <option value="Colombia">% de uso da CPU usuário</option>
-                        <option value="Ecuador">% de uso da CPU sistema</option>
-                        <option value="Guyana">% de uso da memória</option>
-                        <option value="Paraguay">Prioridade</option>
-                        <option value="Peru">Memoria virtual</option>
-                        <option value="Suriname">Nice</option>
-                        <option value="Uruguay">Uruguay</option>
-                        <option value="Venezuela">Estado do processo</option>
-                    </select>-->
+        <div class="level-left">
+            <div class="field has-addons level-item " style="margin-bottom: 0;">
+                <div class="control">
+                    <input class="input is-danger" type="text" placeholder="PID" id="pidKill">
+                </div>
+                <div class="control">
+                    <button class="button is-danger" onclick="handleKillPid(event)">
+                        Kill p/PID
+                    </button>
+                </div>
             </div>
-            <div class="control">
-                <button type="submit" class="button is-danger">Matar processo</button>
+            <div class="field has-addons level-item" style="margin-bottom: 0;">
+                <div class="control">
+                    <input class="input is-danger" type="text" placeholder="PID" id="nomeKill">
+                </div>
+                <div class="control">
+                    <button class="button is-danger" onclick="handleKillNome(event)">
+                        Kill p/nome
+                    </button>
+                </div>
             </div>
         </div>
     </div>
