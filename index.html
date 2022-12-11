@@ -25,7 +25,7 @@
             </article>
             <article class="tile is-child box">
               <p class="title">Abrir terminal</p>
-              <p class="subtitle">Somente linux Mint ou distribuição que usa gnomeshell</p>
+              <p class="subtitle">Somente linux</p>
               <footer class="card-footer">
                 <button id="btnShell" class="card-footer-item button is-outlined">Abrir</button>
               </footer>
@@ -38,8 +38,9 @@
                 <p class="title">Desempenho CPU</p>
                 <p class="subtitle">Monitorar uso da CPU e seus núcleos por segundo</p>
               </div>
-              <div id="chart_div_cpu"><progress id="loadingCPU" class="progress is-small is-primary" max="100"></progress>
-                </div>
+              <div id="chart_div_cpu"><progress id="loadingCPU" class="progress is-small is-primary"
+                  max="100"></progress>
+              </div>
               <footer class="card-footer">
                 <a href="./pages/desempenhoCPU/desempenhoCPU.html"
                   class="card-footer-item button is-outlined">Monitorar</a>
@@ -69,8 +70,24 @@
           style="display: flex; flex-direction: column; justify-content: space-between;">
           <div class="header">
             <p class="title">Processos</p>
-            <p class="subtitle">Visualização dos processos em execução</p>
+            <p class="subtitle">Visualização dos processos em execução. <i>(% da cpu bugada no windows)</i></p>
           </div>
+
+          <!--<p>Campos visiveis</p>
+              <ul>
+                <li>PID</li>
+                <li>PID do parente</li>
+                <li>Nome</li>
+                <li>Porcentagem de uso da CPU (bugado no windows)</li>
+                <li>Porcentagem de uso da CPU usuário (bugado no windows)</li>
+                <li>Porcentagem de uso da CPU sistema (bugado no windows)</li>
+                <li>Porcentagem de uso da memória</li>
+                <li>Prioridade</li>
+                <li>Memoria virtual</li>
+                <li>Nice</li>
+                <li>Estado do processo</li>
+              </ul>-->
+
           <footer class="card-footer">
             <a href="./pages/processos/processos.html" class="card-footer-item button is-outlined">Visualizar</a>
           </footer>

@@ -11,29 +11,56 @@
 </head>
 
 <body>
-    <button class="button is-rounded"><a href="../../index.html">
-            <h1>Voltar</h1>
-        </a></button>
-    <div id="loading" style="text-align: center;">
-        <h2>Carregando ...
-            <progress class="progress is-small is-info" max="100"></progress>
-        </h2>
+    <div class="level">
+        <button class="button is-rounded"><a href="../../index.html">
+                <h1>Voltar</h1>
+            </a></button>
+        <div id="loading" style="text-align: center;">
+            <h2>Carregando ...
+                <progress class="progress is-small is-info" max="100"></progress>
+            </h2>
+        </div>
+        <div class="field has-addons">
+            <div class="control">
+                <input class="input" type="text" placeholder="PID">
+
+                <!-- <select name="country">
+                        <option value="Argentina">PID</option>
+                        <option value="Bolivia">PID do parente</option>
+                        <option value="Brazil">Nome</option>
+                        <option value="Chile">% de uso da CPU</option>
+                        <option value="Colombia">% de uso da CPU usuário</option>
+                        <option value="Ecuador">% de uso da CPU sistema</option>
+                        <option value="Guyana">% de uso da memória</option>
+                        <option value="Paraguay">Prioridade</option>
+                        <option value="Peru">Memoria virtual</option>
+                        <option value="Suriname">Nice</option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Venezuela">Estado do processo</option>
+                    </select>-->
+            </div>
+            <div class="control">
+                <button type="submit" class="button is-danger">Matar processo</button>
+            </div>
+        </div>
     </div>
     <div class="table-container">
         <table class="table is-bordered is-striped is-fullwidth">
             <thead>
                 <tr>
-                    <th>PID</th>
-                    <th><abbr title="PID do parente">PPID</abbr></th>
-                    <th>Nome</th>
-                    <th><abbr title="% De uso da CPU">CPU</abbr></th>
-                    <th><abbr title="% De uso CPU USER">UsCPU</abbr></th>
-                    <th><abbr title="% De uso CPU SYSTEM">SYSCPU</abbr></th>
-                    <th><abbr title="% de Uso memoria">MEM</abbr></th>
-                    <th><abbr title="Prioridade">Prior</abbr></th>
-                    <th><abbr title="Memoria virtual">VMEM</abbr></th>
-                    <th>Nice</th>
-                    <th><abbr title="Estado do processo">State</abbr></th>
+                    <th ondblclick="handleDblClick(event)" id="pid">PID
+                    </th>
+                    <th id="parentPid" ondblclick="handleDblClick(event)"><abbr title="PID do parente">PPID</abbr></th>
+                    <th id="name" ondblclick="handleDblClick(event)">Nome</th>
+                    <th id="cpu" ondblclick="handleDblClick(event)"><abbr title="% De uso da CPU">CPU</abbr></th>
+                    <th id="cpuu" ondblclick="handleDblClick(event)"><abbr title="% De uso CPU USER">UsCPU</abbr></th>
+                    <th id="cpus" ondblclick="handleDblClick(event)"><abbr title="% De uso CPU SYSTEM">SYSCPU</abbr>
+                    </th>
+                    <th id="mem" ondblclick="handleDblClick(event)"><abbr title="% de Uso memoria">MEM</abbr></th>
+                    <th id="priority" ondblclick="handleDblClick(event)"><abbr title="Prioridade">Prior</abbr></th>
+                    <th id="memVsz" ondblclick="handleDblClick(event)"><abbr title="Memoria virtual">VMEM</abbr></th>
+                    <th id="nice" ondblclick="handleDblClick(event)">Nice</th>
+                    <th id="state" ondblclick="handleDblClick(event)"><abbr title="Estado do processo">State</abbr></th>
                 </tr>
             </thead>
             <tbody id="tableBody">

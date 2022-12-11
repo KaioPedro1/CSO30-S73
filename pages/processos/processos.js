@@ -1,11 +1,13 @@
 const si = OS.getSiObj();
 
+var sortOpt = 'cpu';
+
 window.addEventListener('DOMContentLoaded', () => {
     let tableBody = document.getElementById('tableBody');
     let loadingDiv = document.getElementById('loading');
     si.processes().then((data) => {
         loadingDiv.remove();
-        gerarTabelaProcessos(tableBody, data.list.sort(((a, b) => a.cpu - b.cpu)))
+        gerarTabelaProcessos(tableBody, data.list.sort(((a, b) => a[sortOpt] - b[sortOpt])))
         setObserver();
     })
 });
@@ -13,11 +15,10 @@ window.addEventListener('DOMContentLoaded', () => {
 si.getDynamicData().then(data => console.log(data))
 
 function usersCallback(data) {
-
     let tableBody = document.getElementById('tableBody');
     tableBody.innerHTML = "";
     let processesList = data.processes.list;
-    processesList.sort((a, b) => a.cpu - b.cpu);
+    processesList.sort((a, b) => a[sortOpt] - b[sortOpt]);
     gerarTabelaProcessos(document.getElementById('tableBody'), processesList)
 
 }
@@ -25,10 +26,7 @@ const setObserver = () => {
     valueObject = {
         processes: 'list'
     }
-    let observer = si.observe(valueObject, 1000, usersCallback);
-    setTimeout(() => {
-        clearInterval(observer)
-    }, 10000);
+     si.observe(valueObject, 1000, usersCallback);
 }
 const gerarTabelaProcessos = (tabelaBody, lista) => {
     lista.forEach(process => {
@@ -56,4 +54,9 @@ const gerarTabelaProcessos = (tabelaBody, lista) => {
         nice.innerHTML = process.nice
         state.innerHTML = process.state
     });
+}
+
+const handleDblClick = (event) => {
+    sortOpt = event.srcElement.id;
+    console.log(sortOpt)
 }

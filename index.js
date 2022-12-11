@@ -51,7 +51,7 @@ const setObserver = () => {
     let observer = si.observe(valueObject, 1000, usersCallback);
     setTimeout(() => {
         clearInterval(observer)
-    }, 10000);
+    }, 60000);
 };
 function usersCallback(data) {
     let memUsedPercentage = ((data.mem.used / data.mem.total) * 100).toFixed(2);
