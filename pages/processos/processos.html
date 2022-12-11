@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Processos</title>
+    <link rel="stylesheet" href="./processos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="../../node_modules/@vizuaalog/bulmajs/dist/tabs.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./processos.js"></script>
+
+</head>
+
+<body>
+    <button class="button is-rounded"><a href="../../index.html">
+            <h1>Voltar</h1>
+        </a></button>
+    <div id="loading" style="text-align: center;">
+        <h2>Carregando ...
+            <progress class="progress is-small is-info" max="100"></progress>
+        </h2>
+    </div>
+
+    <table class="table is-bordered is-striped is-fullwidth">
+
+        <thead>
+            <tr>
+                <th>PID</th>
+                <th><abbr title="PID do parente">PPID</abbr></th>
+                <th>Nome</th>
+                <th><abbr title="% De uso da CPU">CPU</abbr></th>
+                <th><abbr title="% De uso CPU USER">UsCPU</abbr></th>
+                <th><abbr title="% De uso CPU SYSTEM">SYSCPU</abbr></th>
+                <th><abbr title="% de Uso memoria">MEM</abbr></th>
+                <th><abbr title="Prioridade">Prior</abbr></th>
+                <th><abbr title="Memoria virtual">VMEM</abbr></th>
+                <th>Nice</th>
+                <th><abbr title="Estado do processo">State</abbr></th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+
+
+        </tbody>
+    </table>
+</body>
+
+</html>
