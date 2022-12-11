@@ -64,7 +64,11 @@ function drawAreaChart(data, divId) {
     let options = {
         title: 'Utilização da CPU ao longo do tempo',
         curveType: 'function',
-        legend: { position: 'bottom' }
+        legend: { position: 'bottom' },
+        vAxis: {
+            minValue: 0,
+            maxValue: 100
+        }
     };
     let chart = new google.visualization.AreaChart(document.getElementById(divId));
     chart.draw(data, options);
@@ -78,6 +82,10 @@ function drawLineChart(data, divId) {
         legend: { position: 'bottom' },
         hAxis: {
             title: '% de Utilização'
+        },
+        vAxis: {
+            minValue: 0,
+            maxValue: 100
         }
     };
     let chart = new google.visualization.LineChart(document.getElementById(divId));
