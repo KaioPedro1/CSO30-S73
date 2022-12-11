@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hardware</title>
+    <link rel="stylesheet" href="./desempenhoMem.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="../../node_modules/@vizuaalog/bulmajs/dist/tabs.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./desempenhoMem.js"></script>
+    
+</head>
+
+<body>
+    <button class="button is-rounded"><a href="../../index.html">
+            <h1>Voltar</h1>
+        </a></button>
+    <div class="container">
+        <h2 class="title">Uso da memória RAM </h2>
+        <div id="chart_div_ram_load"  style="height: 20rem;"></div>
+        <p>Uso da RAM está em <span id="uso_ram_span"></span> no segundo <span id="tempo_ram_span"></span></p>
+        <p>Tamanho da memória RAM em GB <span id="tamanho_ram_span"></span> quantidade disponivel <span id="disponivel_ram_span"></span></p>
+    </div>
+    <div class="container" >
+        <h2 class="title">Uso do Disco</h2>
+        <div id="chart_div_cpu_load_nucleo" style="height: 20rem;"></div>
+    </div>
+</body>
+
+</html>

@@ -27,19 +27,14 @@ window.addEventListener('DOMContentLoaded', () => {
         ]));
         drawAreaChart(primeiroGraficoCpu, 'chart_div_cpu_load');
         si.currentLoad().then((data) => {
-            cpuLoadCoresData = [['Tempo', ...data.cpus.map((item, index) => { return `Núcleo ${index}` })], [tempo, ...data.cpus.map((item) => {
+            cpuLoadCoresData = [['Tempo', ...data.cpus.map((item, index) => { return `Núcleo ${index + 1}` })], [tempo, ...data.cpus.map((item) => {
                 return item.load;
             })]];
-
             setObserver();
         })
 
     });
 
-})
-
-si.getDynamicData().then(data => {
-    console.log(data)
 })
 
 const setObserver = () => {
@@ -54,7 +49,7 @@ const setObserver = () => {
 
 function usersCallback(data) {
     cpuLoadCoresData = [...cpuLoadCoresData, [tempo, ...data.currentLoad.cpus.map((item) => {
-        return item.load==0?1:item.load;
+        return item.load == 0 ? 1 : item.load;
     })]];
     cpuLoadData = [...cpuLoadData, [tempo, data.currentLoad.currentLoad.toFixed(2)]];
     drawAreaChart(google.visualization.arrayToDataTable(cpuLoadData), 'chart_div_cpu_load');
@@ -65,18 +60,17 @@ function usersCallback(data) {
     tempoCpuSpan.innerHTML = tempo;
 }
 
-
 function drawAreaChart(data, divId) {
-    var options = {
+    let options = {
         title: 'Utilização da CPU ao longo do tempo',
         curveType: 'function',
         legend: { position: 'bottom' }
     };
-    var chart = new google.visualization.AreaChart(document.getElementById(divId));
+    let chart = new google.visualization.AreaChart(document.getElementById(divId));
     chart.draw(data, options);
 }
 function drawLineChart(data, divId) {
-    var options = {
+    let options = {
         title: 'Utilização de cada núcleo',
         series: {
             1: { curveType: 'function' }
@@ -84,8 +78,8 @@ function drawLineChart(data, divId) {
         legend: { position: 'bottom' },
         hAxis: {
             title: '% de Utilização'
-          }
+        }
     };
-    var chart = new google.visualization.LineChart(document.getElementById(divId));
+    let chart = new google.visualization.LineChart(document.getElementById(divId));
     chart.draw(data, options);
 }
