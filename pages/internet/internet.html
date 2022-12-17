@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Processos</title>
+    <link rel="stylesheet" href="./internet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="./internet.js"></script>
+</head>
+
+<body>
+    <div class="level">
+        <div class="level-right">
+            <button class="button is-rounded level-item"><a href="../../index.html">
+                    <h1>Voltar</h1>
+                </a></button>
+
+        </div>
+        <div id="loading" class="level-item">
+            <h2 style="width: 50%; text-align: center;">Carregando ...
+                <progress class="progress is-small is-info" max="100"></progress>
+            </h2>
+        </div>
+    </div>
+    <h2 class="title">Network ethernet </h2>
+    <div class="table-container">
+        <table class="table is-bordered is-striped is-fullwidth">
+            <thead>
+                <tr>
+                    <th>PID</th>
+                    <th>Process</th>
+                    <th>Protocol</th>
+                    <th>Local address</th>
+                    <th>Local port</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

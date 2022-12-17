@@ -65,33 +65,33 @@
       </div>
     </div>
     <div class="tile is-ancestor">
-      <div class="tile is-12 is-vertical">
-        <article class="tile is-child box"
-          style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div class="header">
-            <p class="title">Processos</p>
-            <p class="subtitle">Visualização dos processos em execução. <i>(% da cpu bugada no windows e matar processo também)</i></p>
-          </div>
-
-          <!--<p>Campos visiveis</p>
-              <ul>
-                <li>PID</li>
-                <li>PID do parente</li>
-                <li>Nome</li>
-                <li>Porcentagem de uso da CPU (bugado no windows)</li>
-                <li>Porcentagem de uso da CPU usuário (bugado no windows)</li>
-                <li>Porcentagem de uso da CPU sistema (bugado no windows)</li>
-                <li>Porcentagem de uso da memória</li>
-                <li>Prioridade</li>
-                <li>Memoria virtual</li>
-                <li>Nice</li>
-                <li>Estado do processo</li>
-              </ul>-->
-
-          <footer class="card-footer">
-            <a href="./pages/processos/processos.html" class="card-footer-item button is-outlined">Visualizar</a>
-          </footer>
-        </article>
+      <div class="tile">
+        <div class="tile is-parent is-6 is-vertical">
+          <article class="tile is-child box"
+            style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="header">
+              <p class="title">Processos</p>
+              <p class="subtitle">Visualização dos processos em execução. <i>(% da cpu bugada no windows e matar
+                  processo também)</i></p>
+            </div>
+            <footer class="card-footer">
+              <a href="./pages/processos/processos.html" class="card-footer-item button is-outlined">Visualizar</a>
+            </footer>
+          </article>
+        </div>
+        <div class="tile is-parent is-vertical">
+          <article class="tile is-child box"
+            style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="header">
+              <p class="title">Network</p>
+            </div>
+            <div id="chart_div_network"><progress id="loadingNetwork" class="progress is-small is-primary" max="100"></progress>
+            </div>
+            <footer class="card-footer">
+              <a href="./pages/internet/internet.html" class="card-footer-item button is-outlined">Visualizar</a>
+            </footer>
+          </article>
+        </div>
       </div>
     </div>
 </body>
