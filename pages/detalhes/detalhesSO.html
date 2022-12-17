@@ -40,6 +40,9 @@
                 <li>
                     <a>Placa de vídeo</a>
                 </li>
+                <li>
+                    <a>USB</a>
+                </li>
             </ul>
         </div>
 
@@ -108,6 +111,30 @@
                         <h2>Carregando
                             <progress class="progress is-medium is-dark" max="100"></progress>
                         </h2>
+                    </div>
+                </li>
+                <li class="container" style="text-align: center;">
+                    <div class="content" id="usb_tab">
+                        <h2 class="title">USB conectados</h2>
+                        <h2 id="loadingUSB">Carregando
+                            <progress class="progress is-medium is-dark" max="100" id=""></progress>
+                        </h2>
+                        <table class="table is-bordered  is-striped" style="display: none;" id="tableUSB">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Bus</th>
+                                    <th>DeviceID</th>
+                                    <th>Name</th>
+                                    <th>Type </th>
+                                    <th>Vendor </th>
+                                    <th>Manufacturer </th>
+                                    <th>Serial Number </th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela_cpu_USB">
+                            </tbody>
+                        </table>
                     </div>
                 </li>
             </ul>

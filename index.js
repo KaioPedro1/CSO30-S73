@@ -91,6 +91,7 @@ function drawLineChart(data, divId) {
     let options = {
         curveType: 'function',
         vAxis: {
+            minValue: 0,
             scaleType: 'log'
         },
         legend: { position: 'bottom' }
